@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerBulletControl : MonoBehaviour
 {
   public float speed;
+  public GameObject impactAnimGO;
+
   void Start()
   {
     speed = 20f;
@@ -29,6 +31,21 @@ public class PlayerBulletControl : MonoBehaviour
     {
       Destroy(gameObject);
     }
+  }
 
+  void OnTriggerEnter2D(Collider2D collider)
+  {
+    if (collider.tag == "EnemyTag")
+    {
+      PlayImpactAnimation();
+      Destroy(gameObject);
+    }
+  }
+
+  void PlayImpactAnimation()
+  {
+    GameObject impactAnim = (GameObject)Instantiate(impactAnimGO);
+
+    impactAnim.transform.position = transform.position;
   }
 }
