@@ -19,7 +19,6 @@ public class Enemy03Bullet : MonoBehaviour
 
   void Update()
   {
-    _direction = new Vector2(-1, 0);
     // atualiza a posição do tiro
     Vector2 position = transform.position;
     position += _direction * speed * Time.deltaTime;
