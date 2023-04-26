@@ -8,9 +8,6 @@ public class Enemy03Control : MonoBehaviour
 
   Animator anim;
 
-  int rotationCount; // quantas vezes o inimigo já girou
-  int maxRotationCount = 1; // quantas vezes o inimigo deve girar antes de atirar
-
   int numOfShots; // quantos tiros o inimigo já deu
   int maxNumOfShots = 5; // quantos tiros o inimigo deve dar antes de girar novamente
 
@@ -37,7 +34,7 @@ public class Enemy03Control : MonoBehaviour
   void Start()
   {
     numOfShots = 0;
-    speed = 4f;
+    speed = 2f;
     anim = GetComponent<Animator>();
     InitRotationAngles();
   }
@@ -65,6 +62,13 @@ public class Enemy03Control : MonoBehaviour
       Vector2 position = transform.position;
       position = new Vector2(position.x - speed * Time.deltaTime, position.y);
       transform.position = position;
+    }
+
+    // se está fora da tela, destrói o objeto
+    Vector2 leftBottom = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+    if (transform.position.x < leftBottom.x)
+    {
+      Destroy(gameObject);
     }
   }
 

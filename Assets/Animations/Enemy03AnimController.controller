@@ -35,8 +35,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: RotatingCount
+  - m_ConditionMode: 1
+    m_ConditionEvent: isRotating
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 958191268127128778}
@@ -45,7 +45,7 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.0071651936
-  m_TransitionOffset: 0.10582321
+  m_TransitionOffset: 0.0011502702
   m_ExitTime: 0.9763237
   m_HasExitTime: 0
   m_HasFixedDuration: 1

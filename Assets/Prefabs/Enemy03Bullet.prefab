@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1775136491090486124}
   m_Layer: 0
   m_Name: Enemy03Bullet
-  m_TagString: Untagged
+  m_TagString: EnemyBulletTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,3 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4b986e96aa49442875af30b494a541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactAnimGO: {fileID: 7555378666829240479, guid: 877aeed4548f6244da5be6a783b58d7c, type: 3}

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy03Bullet : MonoBehaviour
 {
+  public GameObject impactAnimGO;
+
   float speed; // velocidade do tiro
   Vector2 _direction; // direção do tiro
 
@@ -33,6 +35,21 @@ public class Enemy03Bullet : MonoBehaviour
     {
       Destroy(gameObject);
     }
+  }
+
+  void OnTriggerEnter2D(Collider2D col)
+  {
+    if (col.tag == "PlayerTag")
+    {
+      PlayImpactAnimation();
+      Destroy(gameObject);
+    }
+  }
+
+  void PlayImpactAnimation()
+  {
+    GameObject anim = (GameObject)Instantiate(impactAnimGO);
+    anim.transform.position = transform.position;
   }
 
 }
