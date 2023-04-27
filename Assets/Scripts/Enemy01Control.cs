@@ -50,6 +50,11 @@ public class Enemy01Control : MonoBehaviour
 
     // Cria a animação de explosão (auto-destrói após a execução)
     GameObject explosionAnim = (GameObject)Instantiate(explosionAnimGO);
+
+    // Ajusta o tamanho da explosão para inimigos maiores
+    if (gameObject.transform.localScale.x >= 1)
+      explosionAnim.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+
     explosionAnim.transform.position = transform.position;
   }
 }
