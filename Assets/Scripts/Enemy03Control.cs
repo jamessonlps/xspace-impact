@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Enemy03Control : MonoBehaviour
 {
-  float speed;
+  [Header("Attributes")]
+  public float speed;
+  public float shootingRate; // quantos segundos entre cada tiro
+  public int maxNumOfShots;  // quantos tiros o inimigo deve dar antes de girar novamente
+  public int health;         // saúde do inimigo
 
-  Animator anim;
+  [Header("Prefabs")]
+  public GameObject bullet;    // prefab do tiro
+  public GameObject explosion; // prefab da explosão
 
-  int numOfShots; // quantos tiros o inimigo já deu
-  int maxNumOfShots = 5; // quantos tiros o inimigo deve dar antes de girar novamente
-
-  public GameObject bullet; // prefab do tiro
+  [Header("Bullet Spawn Points")]
   public GameObject bulletSpawnPoint01; // objeto que indica onde o tiro deve aparecer
   public GameObject bulletSpawnPoint02;
   public GameObject bulletSpawnPoint03;
@@ -29,12 +32,20 @@ public class Enemy03Control : MonoBehaviour
   Vector2 dirBullet03;
   Vector2 dirBullet04;
 
+  Animator anim;
+  int numOfShots; // quantos tiros o inimigo já deu
 
-  // Start is called before the first frame update
+  public void InitAttributes(float _speed, int _maxNumOfShots, float _shootingRate, int _health)
+  {
+    this.speed = _speed;
+    this.maxNumOfShots = _maxNumOfShots;
+    this.shootingRate = _shootingRate;
+    this.health = _health;
+  }
+
   void Start()
   {
     numOfShots = 0;
-    speed = 2f;
     anim = GetComponent<Animator>();
     InitRotationAngles();
   }
@@ -104,7 +115,29 @@ public class Enemy03Control : MonoBehaviour
       anim.SetBool("isPreparingToRotate", true);
     }
     else
-      Invoke("ShootThemUp", 0.5f);
+      Invoke("ShootThemUp", shootingRate);
+  }
+
+  void OnTriggerEnter2D(Collider2D collider)
+  {
+    if (collider.tag == "PlayerBulletTag")
+    {
+      // TODO: Adicionar dano do bullet do player
+      health--;
+      if (health <= 0)
+      {
+        PlayExplosionAnimation();
+        // TODO: adicionar som de explosão
+        Destroy(gameObject);
+      }
+    }
+  }
+
+  void PlayExplosionAnimation()
+  {
+    GameObject explosionAnimation = (GameObject)Instantiate(explosion);
+    explosionAnimation.transform.localScale = new Vector3(2, 2, 2);
+    explosionAnimation.transform.position = transform.position;
   }
 
 

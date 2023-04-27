@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Enemy06Control : MonoBehaviour
 {
-  public float speed;
+  [Header("Attributes")]
+  public float speed;        // velocidade do inimigo
+  public float shootingRate; // quantos segundos entre cada tiro
+  public int health;         // vida do inimigo
 
+  [Header("Prefabs")]
   public GameObject enemyBullet;
+  public GameObject explosionGO;
+
+  [Header("Bullet Positions")]
   public GameObject enemyBulletPosition01;
   public GameObject enemyBulletPosition02;
   public GameObject enemyBulletPosition03;
@@ -21,9 +28,15 @@ public class Enemy06Control : MonoBehaviour
 
   void Start()
   {
-    speed = 2.5f;
     isShootRotationCompleted = false;
     enemyAnimator = GetComponent<Animator>();
+  }
+
+  public void InitAttributes(float _speed, float _shootingRate, int _health)
+  {
+    this.speed = _speed;
+    this.shootingRate = _shootingRate;
+    this.health = _health;
   }
 
   void Update()
@@ -61,7 +74,7 @@ public class Enemy06Control : MonoBehaviour
     bullet04.transform.position = enemyBulletPosition04.transform.position;
     bullet04.GetComponent<BulletCircleControl>().SetDirection(-enemyBulletPosition04.transform.right);
 
-    Invoke("ShootOnThem", 0.3f);
+    Invoke("ShootOnThem", shootingRate);
   }
 
   void RotateWhileShooting()
@@ -83,20 +96,33 @@ public class Enemy06Control : MonoBehaviour
   {
     Vector2 position = transform.position;
     position = new Vector2(position.x - speed * Time.deltaTime, position.y);
-
     transform.position = position;
   }
 
-  void OnTriggerEnter2D(Collider2D col)
+  void OnTriggerEnter2D(Collider2D collider)
   {
-    // TODO: implementar colisões
+    if (collider.tag == "PlayerBulletTag")
+    {
+      // TODO: implementar dano proporcional ao dano do bullet do player
+      health--;
+      if (health <= 0)
+      {
+        PlayExplosionAnimation();
+        Destroy(gameObject);
+      }
+    }
+  }
+
+  void PlayExplosionAnimation()
+  {
+    GameObject explosion = (GameObject)Instantiate(explosionGO);
+    explosion.transform.position = transform.position;
   }
 
 
   void UpdateRotationAnimState()
   {
     enemyAnimator.SetBool("isRotating", false);
-
     isShootRotationCompleted = false;
     ShootOnThem();
   }

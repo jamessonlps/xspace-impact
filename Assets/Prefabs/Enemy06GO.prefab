@@ -204,7 +204,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  shootingRate: 0
+  health: 0
   enemyBullet: {fileID: 8408041348288189096, guid: 63a0cdb4a634e044da9e2104ed782614, type: 3}
+  explosionGO: {fileID: 7713045869476345249, guid: dd42985aa7de93f4cbc799c97cd066e3, type: 3}
   enemyBulletPosition01: {fileID: 7132507219627693096}
   enemyBulletPosition02: {fileID: 7132507219821496683}
   enemyBulletPosition03: {fileID: 7132507218676116560}

@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class Enemy04Control : MonoBehaviour
 {
+  [Header("Attributes")]
+  public float speed;         // velocidade do inimigo
+  public float speedShooting; // velocidade do inimigo quando está atirando
+  public int health;          // vida do inimigo
+
+  [Header("Prefabs")]
+  public GameObject bullet;
+  public GameObject gunFireAnimGO;
+  public GameObject explosionAnimGO;
+
+  [Header("Bullet Spawn Points")]
+  public GameObject bulletSpawnPoint01;
+  public GameObject bulletSpawnPoint02;
+
+
   bool isMoving = true;
   bool isShooting = false;
-
-  public float speed = 7f;
-  public float speedShooting = 1f;
-
-  public GameObject bullet;
-  public GameObject BulletSpawnPoint01;
-  public GameObject BulletSpawnPoint02;
-
+  Animator anim;
   GameObject player;
 
-  Animator anim;
+  public void InitAttributes(float _speed, float _speedShooting, int _health)
+  {
+    speed = _speed;
+    speedShooting = _speedShooting;
+    health = _health;
+  }
 
   void Start()
   {
@@ -83,10 +96,47 @@ public class Enemy04Control : MonoBehaviour
 
   void OnStartShootingAnimation()
   {
-    GameObject bullet01 = Instantiate(bullet);
-    bullet01.transform.position = BulletSpawnPoint01.transform.position;
+    // Instancia o tiro
+    GameObject bullet01 = (GameObject)Instantiate(bullet);
+    bullet01.transform.position = bulletSpawnPoint01.transform.position;
 
-    GameObject bullet02 = Instantiate(bullet);
-    bullet02.transform.position = BulletSpawnPoint02.transform.position;
+    GameObject bullet02 = (GameObject)Instantiate(bullet);
+    bullet02.transform.position = bulletSpawnPoint02.transform.position;
+
+    // Instancia a animação de tiro e faz ela seguir o sprite
+    GameObject gunFireAnim01 = (GameObject)Instantiate(gunFireAnimGO);
+    GameObject gunFireAnim02 = (GameObject)Instantiate(gunFireAnimGO);
+
+    gunFireAnim01.AddComponent<FollowObject>().targetTransform = bulletSpawnPoint01.transform;
+    gunFireAnim02.AddComponent<FollowObject>().targetTransform = bulletSpawnPoint02.transform;
+
+    gunFireAnim01.transform.position = bulletSpawnPoint01.transform.position;
+    gunFireAnim01.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+    gunFireAnim01.transform.rotation = Quaternion.Euler(0, 0, 90f);
+
+    gunFireAnim02.transform.position = bulletSpawnPoint02.transform.position;
+    gunFireAnim02.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+    gunFireAnim02.transform.rotation = Quaternion.Euler(0, 0, 90f);
+  }
+
+  void OnTriggerEnter2D(Collider2D collider)
+  {
+    if (collider.tag == "PlayerBulletTag")
+    {
+      // TODO: dano proporcional ao bullet do player
+      health--;
+      if (health <= 0)
+      {
+        PlayExplosionAnimation();
+        Destroy(gameObject);
+      }
+    }
+  }
+
+  void PlayExplosionAnimation()
+  {
+    GameObject explosionAnim = (GameObject)Instantiate(explosionAnimGO);
+    explosionAnim.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+    explosionAnim.transform.position = transform.position;
   }
 }

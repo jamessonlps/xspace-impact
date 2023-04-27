@@ -233,7 +233,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f66fabd70a512f4f96b47e24b44b857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  shootingRate: 0
+  maxNumOfShots: 0
+  health: 0
   bullet: {fileID: 2598810941796823675, guid: be1d3b74c07566447971888ecc02e2a6, type: 3}
+  explosion: {fileID: 7713045869476345249, guid: dd42985aa7de93f4cbc799c97cd066e3, type: 3}
   bulletSpawnPoint01: {fileID: 1113383989332446021}
   bulletSpawnPoint02: {fileID: 1113383988494687800}
   bulletSpawnPoint03: {fileID: 1113383989859340555}

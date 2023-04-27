@@ -5,31 +5,38 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+  [Header("Player Movement Control")]
   public float speed;
   public float dodgeSpeed;
+  public float bulletSpeed;
 
   float lastKeyUpPressTime = 0f;
   float lastKeyDownPressTime = 0f;
   float doubleClickTimeThreshold = 0.3f;
 
+  [Header("Player Bullets")]
   public GameObject playerBullet;
   public GameObject playerBulletPosition01;
   public GameObject playerBulletPosition02;
 
+  [Header("Player Gun Fire Animation")]
   public GameObject gunFireAnimGO;
   public GameObject playerGunFirePosition01;
   public GameObject playerGunFirePosition02;
 
-  public Animator playerAnimator;
-
+  Animator playerAnimator;
 
   // Start is called before the first frame update
   void Start()
   {
+    // TODO: atribuições devem ser feitas por um controlador
     speed = 10f;
     dodgeSpeed = 15f;
+    bulletSpeed = 20f;
     playerAnimator = GetComponent<Animator>();
   }
+
+  // TODO: separar as responsabilidades em scripts (PlayerControl, PlayerMovement, PlayerShooting, PlayerDodge, etc)
 
   // Update is called once per frame
   void Update()
@@ -40,7 +47,7 @@ public class PlayerControl : MonoBehaviour
     // Se não estiver se esquivando, pode se esquivar ou se mover
     if (!playerAnimator.GetBool("isDodgingUp") && !playerAnimator.GetBool("isDodgingDown"))
     {
-      if (Input.GetKeyDown(KeyCode.W))
+      if (Input.GetKeyDown(KeyCode.UpArrow))
       {
         float timeSinceLastKeyUpPressed = Time.time - lastKeyUpPressTime;
         if (timeSinceLastKeyUpPressed <= doubleClickTimeThreshold)
@@ -52,7 +59,7 @@ public class PlayerControl : MonoBehaviour
         lastKeyUpPressTime = Time.time;
       }
 
-      if (Input.GetKeyDown(KeyCode.S))
+      if (Input.GetKeyDown(KeyCode.DownArrow))
       {
         float timeSinceLastKeyDownPressed = Time.time - lastKeyDownPressTime;
         if (timeSinceLastKeyDownPressed <= doubleClickTimeThreshold)
@@ -109,24 +116,24 @@ public class PlayerControl : MonoBehaviour
       Mathf.Clamp(position.y, bottomLeft.y + playerSize.y / 2, topRight.y - playerSize.y / 2)
     );
 
-    // calcula a nova posição
+    // calcula a nova posição e atualiza
     position += _direction * speed * Time.deltaTime;
-
-    // atualiza a posição do player
     transform.position = position;
   }
 
-  // Método que controle a esquiva do player
+  // Ativa esquiva para cima
   void ActiveDodgeUp()
   {
     playerAnimator.SetBool("isDodgingUp", true);
   }
 
+  // Ativa esquiva para baixo
   void ActiveDodgeDown()
   {
     playerAnimator.SetBool("isDodgingDown", true);
   }
 
+  // Atualiza posição durante a esquiva para cima
   void UpdateDodgeUpMovement()
   {
     Vector2 position = transform.position;
@@ -144,6 +151,8 @@ public class PlayerControl : MonoBehaviour
     transform.position = position;
   }
 
+
+  // Atualiza posição durante a esquiva para baixo
   void UpdateDodgeDownMovement()
   {
     Vector2 position = transform.position;
@@ -172,6 +181,9 @@ public class PlayerControl : MonoBehaviour
     GameObject bullet01 = (GameObject)Instantiate(playerBullet);
     GameObject bullet02 = (GameObject)Instantiate(playerBullet);
 
+    bullet01.GetComponent<PlayerBulletControl>().speed = bulletSpeed;
+    bullet02.GetComponent<PlayerBulletControl>().speed = bulletSpeed;
+
     // Posiciona os bullets
     bullet01.transform.position = playerBulletPosition01.transform.position;
     bullet02.transform.position = playerBulletPosition02.transform.position;
@@ -195,16 +207,21 @@ public class PlayerControl : MonoBehaviour
     gunFireAnim02.transform.position = playerGunFirePosition02.transform.position;
   }
 
+  // Acionada quando encerra animação de disparo
   void StopShootingAnimation()
   {
     playerAnimator.SetBool("isShooting", false);
   }
 
+
+  // Acionada quando encerra animação de esquiva para cima
   void StopDodgingUpAnimation()
   {
     playerAnimator.SetBool("isDodgingUp", false);
   }
 
+
+  // Acionada quando encerra animação de esquiva para baixo
   void StopDodgingDownAnimation()
   {
     playerAnimator.SetBool("isDodgingDown", false);

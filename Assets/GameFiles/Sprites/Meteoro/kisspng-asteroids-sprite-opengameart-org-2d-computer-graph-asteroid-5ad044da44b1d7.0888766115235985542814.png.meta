@@ -1,0 +1,1543 @@
+fileFormatVersion: 2
+guid: cc6438a0fe0391c4d87a237869ec108e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8596146a821bf6b4b9e68c482885afc5
+      internalID: 648916237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a812a5b30e74948bb85f61ab446d73
+      internalID: 268553498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba35e3388fa6cc3419e2f4d4849d3b97
+      internalID: -264828422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33773cc0c979ff41a8b8d77ea76e731
+      internalID: -1330315312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4abbac307ae6d4096ceac6d2c39863
+      internalID: 1587618408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c11006d7df54a44c9ae994b46ddabcc
+      internalID: 1050793633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb1768257496fd439d777c58b1c98d6
+      internalID: 58107418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddc151d29419764fbbf8efcd2602f63
+      internalID: 237804797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066d62b8c709d7c428780487fdc61129
+      internalID: -143537591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60e93b9d5127024dbc753a4f8ad2c25
+      internalID: 1897906911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b631e6f35594ced4c98868f6184b2b02
+      internalID: 677225111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd70481fa7b94e49abf57a673f17e78
+      internalID: 1573607420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2203c11d773925446bc698cd215d2e3d
+      internalID: 336327233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9e1650f781bb4438f17162746d540a
+      internalID: -600280901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92abe084ebf80745a70773b9adafc29
+      internalID: 1886420854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad38a909acd9b304bbde15bf44ba530b
+      internalID: -281804381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6516576f0e207be419aacd8330b4e5dd
+      internalID: -1322096056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723aa47ebc226c848b8a9bbe7044646e
+      internalID: -914242385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a40c1a1c6f4e574fb33ed294eb08e7f
+      internalID: 843554478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24998b081f880824598ff3f3c88a3aa9
+      internalID: 1455620350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9365a12c5284946b94998a2a96c5fe
+      internalID: 1228302184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0734734f0870c14082f423ff218c808
+      internalID: -559202685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee27a20e647a10f4daf47bd9c06712c5
+      internalID: 444651029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a359f02559d8c4b983eedcd0ff7cc5
+      internalID: 68651929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97eaf589c4012204b82f0f6315411095
+      internalID: -1223747561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e17909af809d244a8d2055b7cecdd9
+      internalID: 1525325341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed42f36d40c6ee34e93a2bb68295b2c0
+      internalID: 421571036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8dd047297946749bd107f276912012
+      internalID: -1713082802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455c63529f436bc48a1f9f27feab729d
+      internalID: -303716974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbf07c5b5a245d41bd016e0374da05e
+      internalID: -1562310594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_30
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fae433a61300474c9abefe484d06187
+      internalID: 1291784504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_31
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e564146d39921fd4a89e7c701b10be30
+      internalID: -479062866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5b08662facf6c44a4a64dcd73e86f5
+      internalID: -637108559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3d31ffcf6a0d747b99c4397f62efba
+      internalID: -916448396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d08e9209de807041be955159c3d4622
+      internalID: 1514066045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_35
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceeef93619004344d8a8bba92f69bfeb
+      internalID: -250034106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4efde7d46d4914faa14afbdb4cf261
+      internalID: -2052684171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_37
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7febb26e8736454da6946cf9cd78975
+      internalID: -167012636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c458a455af4e734989a92752995fa94
+      internalID: 727950629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_39
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce2a4fd056fad645978192cb8536b00
+      internalID: 1460057760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff5d6e0961c0b44ea229c154e9bec45
+      internalID: -606691919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd6f2ee4657ea74e9019d8c91f34a85
+      internalID: 2012166397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03bb37b809d2fc47829ff405c73d6bd
+      internalID: 1941380455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96e49a0857a486448ec7d99327fd9fd
+      internalID: -1771908605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7375164bed9494b40865c7dd2fbf5f43
+      internalID: 1946163503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31336b5e190cad49937e9d8951b5c87
+      internalID: -1793743485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_46
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4eadf910503acf4092eb790015dce94
+      internalID: 107632363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_47
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fe7414f325e4d488fc1756c03a5b02
+      internalID: 1798810653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45726499399476a4aa88323e80072e99
+      internalID: 1396645957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bceee4f7ff0e04fbe1dfb47318d92d
+      internalID: -1349658709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a6ba7e6c198a245831575223423633
+      internalID: -1401793240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931c9ca77e85d9b468b1a0060b574ead
+      internalID: 725935580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8251cd3da12bb104197ff26d7f9e02b8
+      internalID: 1997311048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_53
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a8ae4bb966aea46a8ff40abd383277
+      internalID: 828906090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c949f01fcdaa20a45a7f8dc26ebe0e1c
+      internalID: 1164560311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_55
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f72779104667649b306dd73cee0e8c
+      internalID: 1793904790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5c67d603398b744b4e8c0d0ef1d534
+      internalID: 1655980322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_57
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd70372be53bdfe469aee659c9c8faea
+      internalID: 1697735381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_58
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0159834656f3385468ee17aa5356ebe7
+      internalID: 648751230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_59
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8728f50529c60f54591cf6d5ef54b64b
+      internalID: -551860011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_60
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d9a4024b1cf0242b6604ea8f06b87d
+      internalID: 678938618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_61
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9ab66bc08b0f64d81ee74c1879fcb4
+      internalID: 1131381881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_62
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8826062b1b1418c4da57240d9272cb03
+      internalID: -126110303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_63
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4223d3540364f459ed6390257f9894
+      internalID: -65244140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_0: 648916237
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_1: 268553498
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_10: 677225111
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_11: 1573607420
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_12: 336327233
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_13: -600280901
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_14: 1886420854
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_15: -281804381
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_16: -1322096056
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_17: -914242385
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_18: 843554478
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_19: 1455620350
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_2: -264828422
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_20: 1228302184
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_21: -559202685
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_22: 444651029
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_23: 68651929
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_24: -1223747561
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_25: 1525325341
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_26: 421571036
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_27: -1713082802
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_28: -303716974
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_29: -1562310594
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_3: -1330315312
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_30: 1291784504
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_31: -479062866
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_32: -637108559
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_33: -916448396
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_34: 1514066045
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_35: -250034106
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_36: -2052684171
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_37: -167012636
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_38: 727950629
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_39: 1460057760
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_4: 1587618408
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_40: -606691919
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_41: 2012166397
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_42: 1941380455
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_43: -1771908605
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_44: 1946163503
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_45: -1793743485
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_46: 107632363
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_47: 1798810653
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_48: 1396645957
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_49: -1349658709
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_5: 1050793633
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_50: -1401793240
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_51: 725935580
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_52: 1997311048
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_53: 828906090
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_54: 1164560311
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_55: 1793904790
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_56: 1655980322
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_57: 1697735381
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_58: 648751230
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_59: -551860011
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_6: 58107418
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_60: 678938618
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_61: 1131381881
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_62: -126110303
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_63: -65244140
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_7: 237804797
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_8: -143537591
+      kisspng-asteroids-sprite-opengameart-org-2d-computer-graph-asteroid-5ad044da44b1d7.0888766115235985542814_9: 1897906911
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

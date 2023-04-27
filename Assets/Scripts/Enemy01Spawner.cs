@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Enemy01Spawner : MonoBehaviour
 {
-  float spawnEnemy01Rate = 2f;
+  [Header("Spawn Control")]
+  public float spawnRate;      // intervalo de tempo entre os spawns
+  public float minSpawnRate;   // intervalo mínimo de tempo entre os spawns
+  public float spawnRateDelta; // variação do intervalo de tempo entre os spawns
 
+  [Header("Prefabs")]
   public GameObject[] enemiesGO;
-
 
   void Start()
   {
@@ -29,8 +32,14 @@ public class Enemy01Spawner : MonoBehaviour
     int randomIndex = Random.Range(0, enemiesGO.Length);
     GameObject enemy = (GameObject)Instantiate(enemiesGO[randomIndex]);
 
+    if (randomIndex == 0)
+      enemy.GetComponent<Enemy01Control>().InitAttributes(3f, 10f);
+    else
+      enemy.GetComponent<Enemy01Control>().InitAttributes(5f, 5f);
+
     // Posiciona o inimigo
-    Vector2 position = new Vector2(topRight.x + 5f, Random.Range(bottomLeft.y, topRight.y));
+    Vector2 offset = enemy.GetComponent<Renderer>().bounds.size;
+    Vector2 position = new Vector2(topRight.x + offset.x, Random.Range(bottomLeft.y + offset.y, topRight.y - offset.y));
     enemy.transform.position = position;
 
     // Chama a função novamente
@@ -39,9 +48,14 @@ public class Enemy01Spawner : MonoBehaviour
 
   void ScheduleNextEnemySpawn()
   {
-    if (spawnEnemy01Rate > 0.5f)
-      spawnEnemy01Rate -= 0.05f;
+    if (spawnRate > minSpawnRate)
+      Invoke("UpdateEnemySpawnRate", 1f);
 
-    Invoke("SpawnEnemy", spawnEnemy01Rate);
+    Invoke("SpawnEnemy", spawnRate);
+  }
+
+  void UpdateEnemySpawnRate()
+  {
+    spawnRate -= spawnRateDelta;
   }
 }

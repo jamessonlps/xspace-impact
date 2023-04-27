@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy06Spawner : MonoBehaviour
+public class Enemy04Spawner : MonoBehaviour
 {
   [Header("Spawn Setup")]
   public int numOfEnemies;  // número de inimigos
@@ -21,11 +21,6 @@ public class Enemy06Spawner : MonoBehaviour
     Invoke("SpawnEnemy", 1f);
   }
 
-  void Update()
-  {
-
-  }
-
   void SpawnEnemy()
   {
     // Limite da tela
@@ -37,16 +32,11 @@ public class Enemy06Spawner : MonoBehaviour
     for (int i = 0; i < numOfEnemies; i++)
     {
       GameObject enemy = (GameObject)Instantiate(enemyGO);
-      enemy.GetComponent<Enemy06Control>().InitAttributes(enemySpeed, enemyShootingRate, enemyHealth);
+      enemy.GetComponent<Enemy04Control>().InitAttributes(enemySpeed, enemyShootingRate, enemyHealth);
       Vector2 position = new Vector2(topRight.x, bottomLeft.y + height * i + height / 2);
       enemy.transform.position = position;
     }
 
-    ScheduleNextSpawn();
-  }
-
-  void ScheduleNextSpawn()
-  {
     Invoke("SpawnEnemy", respawnTime);
   }
 }

@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class Enemy01Control : MonoBehaviour
 {
-  float speed;
-  float health;
+  [Header("Attributes")]
+  public float speed;
+  public float health;
 
+  [Header("Prefabs")]
   public GameObject explosionAnimGO;
 
   // Start is called before the first frame update
   void Start()
   {
-    speed = 5f;
-    health = 100f;
+
+  }
+
+  public void InitAttributes(float _speed, float _health)
+  {
+    speed = _speed;
+    health = _health;
   }
 
   // Update is called once per frame
@@ -36,7 +43,7 @@ public class Enemy01Control : MonoBehaviour
     // Detecta colisão com o tiro
     if (collider.tag == "PlayerBulletTag")
     {
-      health -= 50f;
+      health -= 5f;
       if (health <= 0)
       {
         PlayExplosionAnim();

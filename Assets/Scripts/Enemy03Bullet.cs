@@ -6,6 +6,8 @@ public class Enemy03Bullet : MonoBehaviour
 {
   public GameObject impactAnimGO;
 
+  // TODO: Velocidade do tiro deve vir do Spawner ???
+
   float speed; // velocidade do tiro
   Vector2 _direction; // direção do tiro
 
@@ -32,14 +34,12 @@ public class Enemy03Bullet : MonoBehaviour
 
     if ((transform.position.x < min.x) || (transform.position.x > max.x) ||
         (transform.position.y < min.y) || (transform.position.y > max.y))
-    {
       Destroy(gameObject);
-    }
   }
 
-  void OnTriggerEnter2D(Collider2D col)
+  void OnTriggerEnter2D(Collider2D collider)
   {
-    if (col.tag == "PlayerTag")
+    if ((collider.tag == "PlayerTag") || (collider.tag == "PlayerBulletTag"))
     {
       PlayImpactAnimation();
       Destroy(gameObject);

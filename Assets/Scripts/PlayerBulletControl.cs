@@ -4,38 +4,29 @@ using UnityEngine;
 
 public class PlayerBulletControl : MonoBehaviour
 {
+  [Header("Attributes")]
   public float speed;
-  public GameObject impactAnimGO;
 
-  void Start()
-  {
-    speed = 20f;
-  }
+  [Header("Prefabs")]
+  public GameObject impactAnimGO;
 
   void Update()
   {
-    // posição atual do bullet
     Vector2 position = transform.position;
-
-    // calcula a nova posição
     position = new Vector2(position.x + speed * Time.deltaTime, position.y);
-
-    // atualiza a posição do bullet
     transform.position = position;
 
-    // canto superior direito da tela
+    // se o bullet sair da área visível, é destruído
+    Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
     Vector2 topRight = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
-
-    // se o bullet sair da tela, destrói o objeto
-    if (transform.position.x > topRight.x)
-    {
+    if ((transform.position.x < bottomLeft.x) || (transform.position.x > topRight.x) ||
+        (transform.position.y < bottomLeft.y) || (transform.position.y > topRight.y))
       Destroy(gameObject);
-    }
   }
 
   void OnTriggerEnter2D(Collider2D collider)
   {
-    if (collider.tag == "EnemyTag")
+    if ((collider.tag == "EnemyTag") || (collider.tag == "EnemyBulletTag"))
     {
       PlayImpactAnimation();
       Destroy(gameObject);
@@ -45,7 +36,6 @@ public class PlayerBulletControl : MonoBehaviour
   void PlayImpactAnimation()
   {
     GameObject impactAnim = (GameObject)Instantiate(impactAnimGO);
-
     impactAnim.transform.position = transform.position;
   }
 }

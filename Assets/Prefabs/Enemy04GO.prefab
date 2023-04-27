@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6179780861296840827}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 21.93, y: -0.12, z: 0}
-  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6179780861583619493}
@@ -105,9 +105,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   speedShooting: 1
+  health: 0
   bullet: {fileID: 4984897958415353211, guid: 51505e71fd2119546b96114286715c39, type: 3}
-  BulletSpawnPoint01: {fileID: 6179780862085532885}
-  BulletSpawnPoint02: {fileID: 6179780863089632406}
+  gunFireAnimGO: {fileID: 8351097483917325916, guid: 7018f57e9124d7a4fa926a21728b7efc, type: 3}
+  explosionAnimGO: {fileID: 3390286312368685189, guid: 441deb2b7a449ae4ba832b9f7a2f4376, type: 3}
+  bulletSpawnPoint01: {fileID: 6179780862085532885}
+  bulletSpawnPoint02: {fileID: 6179780863089632406}
 --- !u!95 &6179780861296840831
 Animator:
   serializedVersion: 5
@@ -159,7 +162,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -379,7 +382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6179780862085532885}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.944, y: -0.481, z: 0.022867277}
+  m_LocalPosition: {x: -0.944, y: -0.733, z: 0.022867277}
   m_LocalScale: {x: 0.45454535, y: 0.45454535, z: 0.45454547}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -410,7 +413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6179780863089632406}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.974, y: -0.481, z: 0.022867277}
+  m_LocalPosition: {x: 0.974, y: -0.733, z: 0.022867277}
   m_LocalScale: {x: 0.45454535, y: 0.45454535, z: 0.45454547}
   m_ConstrainProportionsScale: 0
   m_Children: []

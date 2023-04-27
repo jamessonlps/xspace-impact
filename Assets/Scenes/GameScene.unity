@@ -183,6 +183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bc9b11135a94947b70320e5bcd96c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnerRate: 30
+  numOfEnemies: 4
+  numOfShoots: 5
+  enemySpeed: 1
+  shootingRate: 0.3
+  enemyHealth: 5
   enemy03GO: {fileID: 1113383988950205379, guid: 3512fdcc501887043b41409e89d2020e, type: 3}
 --- !u!4 &82312790
 Transform:
@@ -229,6 +235,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1023823192}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &381979026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381979028}
+  - component: {fileID: 381979027}
+  m_Layer: 0
+  m_Name: Enemy04Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &381979027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381979026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7c6ab27e7047a42b56cdca4fec4d2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfEnemies: 1
+  respawnTime: 120
+  enemySpeed: 10
+  enemyShootingRate: 0.5
+  enemyHealth: 20
+  enemyGO: {fileID: 6179780861296840827, guid: 21ec0e2b95b0bc14e9ce3d50589be0d9, type: 3}
+--- !u!4 &381979028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381979026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4920692, y: -2.2049043, z: -0.085632645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &431701844
 GameObject:
@@ -596,13 +652,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   dodgeSpeed: 0
+  bulletSpeed: 0
   playerBullet: {fileID: 2090604934420467711, guid: d25fbcac5f71ad6439800b8bc816355a, type: 3}
   playerBulletPosition01: {fileID: 62790362}
   playerBulletPosition02: {fileID: 145799594}
   gunFireAnimGO: {fileID: 8351097483917325916, guid: 7018f57e9124d7a4fa926a21728b7efc, type: 3}
   playerGunFirePosition01: {fileID: 431701844}
   playerGunFirePosition02: {fileID: 1074195846}
-  playerAnimator: {fileID: 0}
 --- !u!50 &1023823195
 Rigidbody2D:
   serializedVersion: 4
@@ -812,10 +868,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d605290849ac928449cad5e2ee1b7e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numOfEnemies: 3
+  respawnTime: 15
+  enemySpeed: 3
+  enemyShootingRate: 0.25
+  enemyHealth: 10
   enemyGO: {fileID: 7132507219202432938, guid: 913822f8ac02b724b96748b93c2aec7c, type: 3}
-  numOfEnemies: 0
-  spawnTime: 0
-  respawnTime: 0
 --- !u!4 &1236224702
 Transform:
   m_ObjectHideFlags: 0
@@ -847,7 +905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1798675249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +918,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e54f3174f8f5c2458464e8f6f66f2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnRate: 2
+  minSpawnRate: 0.5
+  spawnRateDelta: 0.05
   enemiesGO:
   - {fileID: 1687306165293780531, guid: ee2301081f8c15d4eb0dedb2e3c9c3a3, type: 3}
   - {fileID: 5953076324647748838, guid: 6aff135da8f4bf146b704674ada3a18b, type: 3}
