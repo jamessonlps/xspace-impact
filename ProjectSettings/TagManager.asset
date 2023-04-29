@@ -8,6 +8,7 @@ TagManager:
   - EnemyTag
   - PlayerBulletTag
   - EnemyBulletTag
+  - PlayerCollider
   layers:
   - Default
   - TransparentFX
