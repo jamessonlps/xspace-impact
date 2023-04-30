@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,6 @@ public class Enemy03Control : MonoBehaviour
   public float speed;
   public float shootingRate; // quantos segundos entre cada tiro
   public int maxNumOfShots;  // quantos tiros o inimigo deve dar antes de girar novamente
-  public int health;         // saúde do inimigo
 
   [Header("Prefabs")]
   public GameObject bullet;    // prefab do tiro
@@ -32,25 +32,25 @@ public class Enemy03Control : MonoBehaviour
   Vector2 dirBullet03;
   Vector2 dirBullet04;
 
+
   Animator anim;
   int numOfShots; // quantos tiros o inimigo já deu
 
-  public void InitAttributes(float _speed, int _maxNumOfShots, float _shootingRate, int _health)
+  public void InitAttributes(float _speed, int _maxNumOfShots, float _shootingRate)
   {
     this.speed = _speed;
     this.maxNumOfShots = _maxNumOfShots;
     this.shootingRate = _shootingRate;
-    this.health = _health;
   }
 
-  void Start()
+  private void Start()
   {
     numOfShots = 0;
     anim = GetComponent<Animator>();
     InitRotationAngles();
   }
 
-  void InitRotationAngles()
+  private void InitRotationAngles()
   {
     dirBullet01 = new Vector2(-1f, 0.33f);
     angleBullet01 = 180 + Mathf.Atan2(dirBullet01.y, dirBullet01.x) * Mathf.Rad2Deg;
@@ -65,7 +65,7 @@ public class Enemy03Control : MonoBehaviour
     angleBullet04 = 180 + Mathf.Atan2(dirBullet04.y, dirBullet04.x) * Mathf.Rad2Deg;
   }
 
-  void Update()
+  private void Update()
   {
     if (anim.GetBool("isRotating"))
     {
@@ -83,7 +83,7 @@ public class Enemy03Control : MonoBehaviour
     }
   }
 
-  void ShootThemUp()
+  private void ShootThemUp()
   {
     // instancia os tiros
     GameObject bullet01 = (GameObject)Instantiate(bullet);
@@ -116,28 +116,6 @@ public class Enemy03Control : MonoBehaviour
     }
     else
       Invoke("ShootThemUp", shootingRate);
-  }
-
-  void OnTriggerEnter2D(Collider2D collider)
-  {
-    if (collider.tag == "PlayerBulletTag")
-    {
-      // TODO: Adicionar dano do bullet do player
-      health--;
-      if (health <= 0)
-      {
-        PlayExplosionAnimation();
-        // TODO: adicionar som de explosão
-        Destroy(gameObject);
-      }
-    }
-  }
-
-  void PlayExplosionAnimation()
-  {
-    GameObject explosionAnimation = (GameObject)Instantiate(explosion);
-    explosionAnimation.transform.localScale = new Vector3(2, 2, 2);
-    explosionAnimation.transform.position = transform.position;
   }
 
 

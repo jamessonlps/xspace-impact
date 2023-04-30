@@ -7,38 +7,34 @@ public class Enemy04Control : MonoBehaviour
   [Header("Attributes")]
   public float speed;         // velocidade do inimigo
   public float speedShooting; // velocidade do inimigo quando está atirando
-  public int health;          // vida do inimigo
 
   [Header("Prefabs")]
   public GameObject bullet;
   public GameObject gunFireAnimGO;
-  public GameObject explosionAnimGO;
 
   [Header("Bullet Spawn Points")]
   public GameObject bulletSpawnPoint01;
   public GameObject bulletSpawnPoint02;
-
 
   bool isMoving = true;
   bool isShooting = false;
   Animator anim;
   GameObject player;
 
-  public void InitAttributes(float _speed, float _speedShooting, int _health)
+  public void InitAttributes(float _speed, float _speedShooting)
   {
     speed = _speed;
     speedShooting = _speedShooting;
-    health = _health;
   }
 
-  void Start()
+  private void Start()
   {
     player = GameObject.Find("PlayerGO");
     anim = GetComponent<Animator>();
     Invoke("StartPreparingShootAnimation", 1f);
   }
 
-  void Update()
+  private void Update()
   {
     if (isMoving)
     {
@@ -119,24 +115,4 @@ public class Enemy04Control : MonoBehaviour
     gunFireAnim02.transform.rotation = Quaternion.Euler(0, 0, 90f);
   }
 
-  void OnTriggerEnter2D(Collider2D collider)
-  {
-    if (collider.tag == "PlayerBulletTag")
-    {
-      // TODO: dano proporcional ao bullet do player
-      health--;
-      if (health <= 0)
-      {
-        PlayExplosionAnimation();
-        Destroy(gameObject);
-      }
-    }
-  }
-
-  void PlayExplosionAnimation()
-  {
-    GameObject explosionAnim = (GameObject)Instantiate(explosionAnimGO);
-    explosionAnim.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-    explosionAnim.transform.position = transform.position;
-  }
 }

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5622672904287271812}
   - component: {fileID: 3764806170559831207}
   - component: {fileID: 2298867822575169017}
+  - component: {fileID: -1026321003397203713}
+  - component: {fileID: -3579934858449745492}
   m_Layer: 0
   m_Name: Enemy02RedGO
   m_TagString: EnemyTag
@@ -121,7 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  health: 0
   explosionAnimGO: {fileID: 2785581658895171416, guid: 4f58b69e50ebb4649b76796b3b540977, type: 3}
 --- !u!50 &3764806170559831207
 Rigidbody2D:
@@ -170,3 +171,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.02, y: 1.48}
   m_EdgeRadius: 0
+--- !u!114 &-1026321003397203713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953076324647748838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791f3558930521d47a5678029eb0f4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeData: {fileID: 0}
+--- !u!114 &-3579934858449745492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953076324647748838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7bdfac14cce584dabc80fa619f5418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 2785581658895171416, guid: 4f58b69e50ebb4649b76796b3b540977, type: 3}
+  explosionAnimTransform: {fileID: 7977017920819372556}
+  lifeManager: {fileID: -1026321003397203713}

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1687306165293780534}
   - component: {fileID: 1687306165293780535}
   - component: {fileID: 1687306165293780537}
+  - component: {fileID: 3520341302803191906}
+  - component: {fileID: 5648862499456710469}
   m_Layer: 0
   m_Name: Enemy01BlueGO
   m_TagString: EnemyTag
@@ -168,5 +170,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  health: 0
   explosionAnimGO: {fileID: 2785581658895171416, guid: 4f58b69e50ebb4649b76796b3b540977, type: 3}
+--- !u!114 &3520341302803191906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687306165293780531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791f3558930521d47a5678029eb0f4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeData: {fileID: 0}
+--- !u!114 &5648862499456710469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687306165293780531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7bdfac14cce584dabc80fa619f5418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 2785581658895171416, guid: 4f58b69e50ebb4649b76796b3b540977, type: 3}
+  explosionAnimTransform: {fileID: 1687306165293780532}
+  lifeManager: {fileID: 3520341302803191906}

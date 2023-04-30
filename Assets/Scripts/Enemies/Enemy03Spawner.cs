@@ -15,9 +15,16 @@ public class Enemy03Spawner : MonoBehaviour
   [Header("Prefabs")]
   public GameObject enemy03GO;
 
+  ObjectLifeData enemyLifeData;
+
   void Start()
   {
     // TODO: Gerenciador de spawners atribui as varáveis de controle
+
+    enemyLifeData = ScriptableObject.CreateInstance<ObjectLifeData>();
+    enemyLifeData.fullLife = 10;
+    enemyLifeData.timeBetweenDamage = 0.5f;
+    enemyLifeData.invulnerableOnDamage = false;
     Invoke("SpawnEnemy", 1f);
   }
 
@@ -38,11 +45,11 @@ public class Enemy03Spawner : MonoBehaviour
     {
       GameObject enemy = (GameObject)Instantiate(enemy03GO);
 
+      enemy.GetComponent<LifeManager>().lifeData = enemyLifeData;
       enemy.GetComponent<Enemy03Control>().InitAttributes(
         enemySpeed,
         numOfShoots,
-        shootingRate,
-        enemyHealth
+        shootingRate
       );
 
       Vector2 position = new Vector2(topRight.x, bottomLeft.y + height * i + height / 2);

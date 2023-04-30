@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6179780861296840825}
   - component: {fileID: 6179780861296840826}
-  - component: {fileID: 6179780861296840824}
   - component: {fileID: 6179780861296840831}
   - component: {fileID: 6179780861296840829}
   - component: {fileID: 6179780861296840830}
+  - component: {fileID: 6179780861296840824}
+  - component: {fileID: 7360505807119186172}
+  - component: {fileID: 5330704670890633164}
   m_Layer: 0
   m_Name: Enemy04GO
   m_TagString: EnemyTag
@@ -91,26 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6179780861296840824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6179780861296840827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8439bd9475af4e04b8bd3afb253707c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  speedShooting: 1
-  health: 0
-  bullet: {fileID: 4984897958415353211, guid: 51505e71fd2119546b96114286715c39, type: 3}
-  gunFireAnimGO: {fileID: 8351097483917325916, guid: 7018f57e9124d7a4fa926a21728b7efc, type: 3}
-  explosionAnimGO: {fileID: 3390286312368685189, guid: 441deb2b7a449ae4ba832b9f7a2f4376, type: 3}
-  bulletSpawnPoint01: {fileID: 6179780862085532885}
-  bulletSpawnPoint02: {fileID: 6179780863089632406}
 --- !u!95 &6179780861296840831
 Animator:
   serializedVersion: 5
@@ -253,6 +235,54 @@ PolygonCollider2D:
       - {x: 0.14999999, y: 0.9}
       - {x: 0.14999999, y: 0.85999995}
       - {x: 0.14, y: 0.87}
+--- !u!114 &6179780861296840824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6179780861296840827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8439bd9475af4e04b8bd3afb253707c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  speedShooting: 1
+  health: 0
+  bullet: {fileID: 4984897958415353211, guid: 51505e71fd2119546b96114286715c39, type: 3}
+  gunFireAnimGO: {fileID: 8351097483917325916, guid: 7018f57e9124d7a4fa926a21728b7efc, type: 3}
+  explosionAnimGO: {fileID: 3390286312368685189, guid: 441deb2b7a449ae4ba832b9f7a2f4376, type: 3}
+  bulletSpawnPoint01: {fileID: 6179780862085532885}
+  bulletSpawnPoint02: {fileID: 6179780863089632406}
+--- !u!114 &7360505807119186172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6179780861296840827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7bdfac14cce584dabc80fa619f5418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 3390286312368685189, guid: 441deb2b7a449ae4ba832b9f7a2f4376, type: 3}
+  explosionAnimTransform: {fileID: 6179780861296840825}
+  lifeManager: {fileID: 5330704670890633164}
+--- !u!114 &5330704670890633164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6179780861296840827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791f3558930521d47a5678029eb0f4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeData: {fileID: 0}
 --- !u!1 &6179780861583619488
 GameObject:
   m_ObjectHideFlags: 0

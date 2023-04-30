@@ -350,10 +350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfEnemies: 1
-  respawnTime: 120
+  respawnTime: 60
   enemySpeed: 10
   enemyShootingRate: 0.5
-  enemyHealth: 20
   enemyGO: {fileID: 6179780861296840827, guid: 21ec0e2b95b0bc14e9ce3d50589be0d9, type: 3}
 --- !u!4 &381979028
 Transform:
@@ -722,10 +721,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1023823192}
   - component: {fileID: 1023823191}
-  - component: {fileID: 1023823193}
   - component: {fileID: 1023823195}
   - component: {fileID: 1023823196}
   - component: {fileID: 1023823197}
+  - component: {fileID: 1023823198}
+  - component: {fileID: 1023823193}
+  - component: {fileID: 1023823199}
   m_Layer: 0
   m_Name: PlayerGO
   m_TagString: PlayerTag
@@ -818,13 +819,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   dodgeSpeed: 0
-  bulletSpeed: 0
-  playerBullet: {fileID: 2090604934420467711, guid: d25fbcac5f71ad6439800b8bc816355a, type: 3}
-  playerBulletPosition01: {fileID: 62790362}
-  playerBulletPosition02: {fileID: 145799594}
-  gunFireAnimGO: {fileID: 8351097483917325916, guid: 7018f57e9124d7a4fa926a21728b7efc, type: 3}
-  playerGunFirePosition01: {fileID: 431701844}
-  playerGunFirePosition02: {fileID: 1074195846}
 --- !u!50 &1023823195
 Rigidbody2D:
   serializedVersion: 4
@@ -974,6 +968,37 @@ PolygonCollider2D:
       - {x: -0.08, y: -1.775}
       - {x: -0.06, y: -1.555}
       - {x: -0.04, y: -1.405}
+--- !u!114 &1023823198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023823190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e681c01710a12a449ef7ded843f1825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1023823199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023823190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f50d0f0b7b4524393e380c025ab07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 0
+  playerBullet: {fileID: 2090604934420467711, guid: d25fbcac5f71ad6439800b8bc816355a, type: 3}
+  gunFireAnimGO: {fileID: 8351097483917325916, guid: 7018f57e9124d7a4fa926a21728b7efc, type: 3}
+  playerBulletPosition01: {fileID: 62790362}
+  playerBulletPosition02: {fileID: 145799594}
+  playerGunFirePosition01: {fileID: 431701844}
+  playerGunFirePosition02: {fileID: 1074195846}
 --- !u!1 &1035722408
 GameObject:
   m_ObjectHideFlags: 0

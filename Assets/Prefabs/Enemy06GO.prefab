@@ -74,8 +74,10 @@ GameObject:
   - component: {fileID: 7132507219202432937}
   - component: {fileID: 7132507219202432948}
   - component: {fileID: 7132507219202432949}
-  - component: {fileID: 7132507219202432950}
   - component: {fileID: 7132507219202432951}
+  - component: {fileID: 7132507219202432950}
+  - component: {fileID: -2707066839361189065}
+  - component: {fileID: 1482610182622929374}
   m_Layer: 0
   m_Name: Enemy06GO
   m_TagString: EnemyTag
@@ -191,27 +193,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7132507219202432950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7132507219202432938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba8b5aafd20ddc439a43e1253826b1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  shootingRate: 0
-  health: 0
-  enemyBullet: {fileID: 8408041348288189096, guid: 63a0cdb4a634e044da9e2104ed782614, type: 3}
-  explosionGO: {fileID: 7713045869476345249, guid: dd42985aa7de93f4cbc799c97cd066e3, type: 3}
-  enemyBulletPosition01: {fileID: 7132507219627693096}
-  enemyBulletPosition02: {fileID: 7132507219821496683}
-  enemyBulletPosition03: {fileID: 7132507218676116560}
-  enemyBulletPosition04: {fileID: 7132507218921488729}
 --- !u!95 &7132507219202432951
 Animator:
   serializedVersion: 5
@@ -232,6 +213,53 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7132507219202432950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132507219202432938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba8b5aafd20ddc439a43e1253826b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  shootingRate: 0
+  enemyBullet: {fileID: 8408041348288189096, guid: 63a0cdb4a634e044da9e2104ed782614, type: 3}
+  enemyBulletPosition01: {fileID: 7132507219627693096}
+  enemyBulletPosition02: {fileID: 7132507219821496683}
+  enemyBulletPosition03: {fileID: 7132507218676116560}
+  enemyBulletPosition04: {fileID: 7132507218921488729}
+--- !u!114 &-2707066839361189065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132507219202432938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7bdfac14cce584dabc80fa619f5418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 7713045869476345249, guid: dd42985aa7de93f4cbc799c97cd066e3, type: 3}
+  explosionAnimTransform: {fileID: 7132507219202432936}
+  lifeManager: {fileID: 1482610182622929374}
+--- !u!114 &1482610182622929374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132507219202432938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791f3558930521d47a5678029eb0f4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeData: {fileID: 0}
 --- !u!1 &7132507219627693096
 GameObject:
   m_ObjectHideFlags: 0

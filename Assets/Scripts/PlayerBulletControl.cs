@@ -24,9 +24,15 @@ public class PlayerBulletControl : MonoBehaviour
       Destroy(gameObject);
   }
 
-  void OnTriggerEnter2D(Collider2D collider)
+  private void OnTriggerEnter2D(Collider2D collider)
   {
-    if ((collider.tag == "EnemyTag") || (collider.tag == "EnemyBulletTag"))
+    if (collider.TryGetComponent<Enemy>(out var enemy))
+    {
+      PlayImpactAnimation();
+      Destroy(gameObject);
+      enemy.lifeManager.TakeDamage(1);
+    }
+    if (collider.tag == "EnemyBulletTag")
     {
       PlayImpactAnimation();
       Destroy(gameObject);

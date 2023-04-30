@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy06Spawner : MonoBehaviour
+public class Enemy04Spawner : MonoBehaviour
 {
   [Header("Spawn Setup")]
   public int numOfEnemies;  // número de inimigos
@@ -11,19 +11,20 @@ public class Enemy06Spawner : MonoBehaviour
   [Header("Enemy Attributes")]
   public float enemySpeed;        // velocidade do inimigo
   public float enemyShootingRate; // quantos segundos entre cada tiro
-  public int enemyHealth;         // vida do inimigo
 
   [Header("Prefabs")]
   public GameObject enemyGO;
 
+  ObjectLifeData enemyLifeData;
+
   void Start()
   {
+    enemyLifeData = ScriptableObject.CreateInstance<ObjectLifeData>();
+    enemyLifeData.fullLife = 30;
+    enemyLifeData.timeBetweenDamage = 0.5f;
+    enemyLifeData.invulnerableOnDamage = false;
+
     Invoke("SpawnEnemy", 1f);
-  }
-
-  void Update()
-  {
-
   }
 
   void SpawnEnemy()
@@ -32,21 +33,17 @@ public class Enemy06Spawner : MonoBehaviour
     Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
     Vector2 topRight = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-    // divide altura da tela por pelo número de inimigos
     float height = (topRight.y - bottomLeft.y) / numOfEnemies;
     for (int i = 0; i < numOfEnemies; i++)
     {
       GameObject enemy = (GameObject)Instantiate(enemyGO);
-      enemy.GetComponent<Enemy06Control>().InitAttributes(enemySpeed, enemyShootingRate, enemyHealth);
+      enemy.GetComponent<Enemy04Control>().InitAttributes(enemySpeed, enemyShootingRate);
+      enemy.GetComponent<LifeManager>().lifeData = enemyLifeData;
+
       Vector2 position = new Vector2(topRight.x, bottomLeft.y + height * i + height / 2);
       enemy.transform.position = position;
     }
 
-    ScheduleNextSpawn();
-  }
-
-  void ScheduleNextSpawn()
-  {
     Invoke("SpawnEnemy", respawnTime);
   }
 }
