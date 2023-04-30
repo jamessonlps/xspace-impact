@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlueCrystalControl : MonoBehaviour
+public class GreenCrystalControl : MonoBehaviour
 {
     [Header("Attributes")]
     public float speed;

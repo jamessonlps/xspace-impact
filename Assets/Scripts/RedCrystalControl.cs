@@ -30,7 +30,7 @@ public class RedCrystalControl : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         // Detecta colisão com o a nave
-        if (collider.tag == "PlayerCollider")
+        if (collider.tag == "PlayerTag")
         {
             Destroy(gameObject);
         }
