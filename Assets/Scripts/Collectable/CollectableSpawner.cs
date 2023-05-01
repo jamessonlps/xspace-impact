@@ -6,7 +6,7 @@ public class CollectableSpawner : MonoBehaviour
 {
   [Header("Spawn Control")]
   [SerializeField] private float spawnRate = 60f;      // intervalo de tempo entre os spawns
-  [SerializeField] private float minSpawnRate = 45f;   // intervalo mínimo de tempo entre os spawns
+  [SerializeField] private float minSpawnRate = 30f;   // intervalo mínimo de tempo entre os spawns
   [SerializeField] private float spawnRateDelta = 0.5f; // variação do intervalo de tempo entre os spawns
 
   [Header("Prefabs")]
@@ -25,7 +25,7 @@ public class CollectableSpawner : MonoBehaviour
     ScheduleNextLifeCollectableSpawn();
   }
 
-  public void ScheduleNextLifeCollectableSpawn()
+  private void ScheduleNextLifeCollectableSpawn()
   {
     if (spawnRate > minSpawnRate)
       Invoke("UpdateLifeCollectableSpawnRate", 45f);

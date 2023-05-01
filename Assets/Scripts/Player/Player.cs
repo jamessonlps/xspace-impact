@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
   [SerializeField] private LifeManager lifeManager;
   [SerializeField] private TMP_Text lifeText;
+  [SerializeField] private GameplayManager gameplayManager;
+  [SerializeField] private GameObject exposionAnimation;
 
   private BlinkDamageAnimation blinkDamageAnimation;
 
@@ -25,8 +27,8 @@ public class Player : MonoBehaviour
   {
     lifeManager.OnDeath -= HandleDeath;
     lifeManager.OnLifeChange -= HandleLifeChange;
-    lifeManager.OnTakeDamage += HandleTakeDamage;
-    lifeManager.OnEndTakingDamage += HandleEndTakingDamage;
+    lifeManager.OnTakeDamage -= HandleTakeDamage;
+    lifeManager.OnEndTakingDamage -= HandleEndTakingDamage;
   }
 
   private void HandleTakeDamage()
@@ -41,8 +43,10 @@ public class Player : MonoBehaviour
 
   private void HandleDeath()
   {
-    // TODO: implementar morte do player
-    Debug.Log("Player morreu");
+    Instantiate(exposionAnimation, transform.position, Quaternion.identity);
+    // TODO: implementar som da explosão
+    gameplayManager.ChangeToGameOver();
+    Destroy(gameObject);
   }
 
   private void HandleLifeChange(int life)
@@ -54,7 +58,6 @@ public class Player : MonoBehaviour
 
   public bool TakeDamage(int damage)
   {
-    // TODO: implementar o take damage nos bullets dos inimigos
     return lifeManager.TakeDamage(damage);
   }
 

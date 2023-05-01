@@ -23,17 +23,15 @@ public class Enemy03Spawner : MonoBehaviour
 
     enemyLifeData = ScriptableObject.CreateInstance<ObjectLifeData>();
     enemyLifeData.fullLife = 10;
-    enemyLifeData.timeBetweenDamage = 0.5f;
+    enemyLifeData.timeBetweenDamage = 0.01f;
     enemyLifeData.invulnerableOnDamage = false;
   }
 
-  void SpawnEnemy()
+  public void SpawnEnemy()
   {
-    // Limite da tela
     Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
     Vector2 topRight = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-    // Cria os inimigos igualmente espaçados
     float height = (topRight.y - bottomLeft.y) / numOfEnemies;
     for (int i = 0; i < numOfEnemies; i++)
     {
@@ -53,7 +51,7 @@ public class Enemy03Spawner : MonoBehaviour
     ScheduleNextSpawn();
   }
 
-  public void ScheduleNextSpawn()
+  private void ScheduleNextSpawn()
   {
     Invoke("SpawnEnemy", SpawnerRate);
   }

@@ -12,32 +12,22 @@ public class RedCrystalSpawner : MonoBehaviour
   [Header("Prefabs")]
   public GameObject[] RedCrystal;
 
-  // Start is called before the first frame update
-  void Start()
+  public void SpawnCrystalRed()
   {
-    SpawnCrystalRed(); // TODO: remover do start
-  }
-
-  void SpawnCrystalRed()
-  {
-    // Limite da tela
     Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
     Vector2 topRight = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-    // Escolhe um RedCrystal aleatório
     int randomIndex = Random.Range(0, RedCrystal.Length);
     GameObject redcrystal = (GameObject)Instantiate(RedCrystal[randomIndex]);
 
-    // Posiciona o RedCrystal
     Vector2 offset = redcrystal.GetComponent<Renderer>().bounds.size;
     Vector2 position = new Vector2(topRight.x + offset.x, Random.Range(bottomLeft.y + offset.y, topRight.y - offset.y));
     redcrystal.transform.position = position;
 
-    // Chama a função novamente
     ScheduleNextRedCrystalSpawn();
   }
 
-  void ScheduleNextRedCrystalSpawn()
+  private void ScheduleNextRedCrystalSpawn()
   {
     if (spawnRate > minSpawnRate)
       Invoke("UpdateRedCrystalSpawnRate", 1f);
@@ -45,7 +35,13 @@ public class RedCrystalSpawner : MonoBehaviour
     Invoke("SpawnCrystalRed", spawnRate);
   }
 
-  void UpdateRedCrystalSpawnRate()
+  public void UnscheduleNextRedCrystalSpawn()
+  {
+    CancelInvoke("SpawnCrystalRed");
+    CancelInvoke("UpdateRedCrystalSpawnRate");
+  }
+
+  private void UpdateRedCrystalSpawnRate()
   {
     spawnRate -= spawnRateDelta;
   }

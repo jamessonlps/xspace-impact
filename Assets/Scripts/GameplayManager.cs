@@ -7,13 +7,17 @@ using TMPro;
 public class GameplayManager : MonoBehaviour
 {
   [SerializeField] private GameObject playerGO;
+  [SerializeField] private Timer timer;
 
   [Header("Enemy Spawners")]
   [SerializeField] private GameObject enemy01SpawnerGO;
   [SerializeField] private GameObject enemy03SpawnerGO;
   [SerializeField] private GameObject enemy04SpawnerGO;
   [SerializeField] private GameObject enemy06SpawnerGO;
-  // [SerializeField] private GameObject gameOverGO;
+
+  [Header("User Interface")]
+  [SerializeField] private GameObject gameOverGO;
+  [SerializeField] private GameObject gameRunningGO;
 
   [Header("Collectable Spawner")]
   [SerializeField] private GameObject collectableSpawnerGO;
@@ -24,13 +28,15 @@ public class GameplayManager : MonoBehaviour
     Phase1,
     Phase2,
     Phase3,
-    // GameOver
+    Phase4,
+    GameOver
   }
 
   GameplayManagerState GPMstate;
 
   private void Start()
   {
+    gameOverGO.SetActive(false);
     GPMstate = GameplayManagerState.Starting;
     Invoke("UpdateGameplayState", 0.1f);
   }
@@ -51,64 +57,66 @@ public class GameplayManager : MonoBehaviour
       case GameplayManagerState.Phase3:
         Phase3();
         break;
-        //   case GameplayManagerState.GameOver:
-        //     GameOver();
-        //     break;
+      case GameplayManagerState.Phase4:
+        Phase4();
+        break;
+      case GameplayManagerState.GameOver:
+        GameOver();
+        break;
     }
   }
 
   private void Starting()
   {
-    playerGO.SetActive(true);
+    timer.StartTimer();
     SetGameplayManagerState(GameplayManagerState.Phase1);
     Invoke("UpdateGameplayState", 0.1f);
   }
 
 
-  /// <summary>
-  /// Fase 1: Inimigos 1 e 2 (não atiram)
-  /// </summary>
   private void Phase1()
   {
-    enemy01SpawnerGO.SetActive(true);
     enemy01SpawnerGO.GetComponent<Enemy01Spawner>().ScheduleNextEnemySpawn();
     Invoke("ChangeToPhase2", 30f);
   }
 
 
-  /// <summary>
-  /// Fase 2: Entram os inimigos 3 (que atira) e os coletáveis
-  /// </summary>
   private void Phase2()
   {
-    // Aciona o spawner de coletáveis
-    collectableSpawnerGO.SetActive(true);
-    collectableSpawnerGO.GetComponent<CollectableSpawner>().ScheduleNextLifeCollectableSpawn();
-    // Aciona o spawner de inimigos 3
-    enemy03SpawnerGO.SetActive(true);
-    enemy03SpawnerGO.GetComponent<Enemy03Spawner>().ScheduleNextSpawn();
+    collectableSpawnerGO.GetComponent<CollectableSpawner>().SpawnLifeCollectable();
+    enemy03SpawnerGO.GetComponent<Enemy03Spawner>().SpawnEnemy();
     Invoke("ChangeToPhase3", 60f);
   }
 
 
-  /// <summary>
-  /// Fase 3: Entram os inimigos 4 (persegue o jogador)
-  /// </summary>
   private void Phase3()
   {
-    enemy04SpawnerGO.SetActive(true);
     enemy03SpawnerGO.GetComponent<Enemy03Spawner>().UnscheduleNextEnemySpawn();
+    enemy06SpawnerGO.GetComponent<Enemy06Spawner>().SpawnEnemy();
+    Invoke("ChangeToPhase4", 60f);
+  }
+
+
+  private void Phase4()
+  {
+    enemy06SpawnerGO.GetComponent<Enemy03Spawner>().UnscheduleNextEnemySpawn();
+    enemy04SpawnerGO.GetComponent<Enemy04Spawner>().SpawnEnemy();
+    Invoke("ChangeToGameOver", 60f);
   }
 
 
   private void GameOver()
   {
-    playerGO.SetActive(false);
-    enemy01SpawnerGO.SetActive(false);
-    enemy03SpawnerGO.SetActive(false);
-    enemy04SpawnerGO.SetActive(false);
-    enemy06SpawnerGO.SetActive(false);
-    // gameOverGO.SetActive(true);
+    timer.StopTimer();
+    CancelAllInvokes();
+    UnscheduleAllSpawners();
+    gameRunningGO.SetActive(false);
+    Invoke("ShowGameOver", 3f);
+  }
+
+  private void ShowGameOver()
+  {
+    gameOverGO.SetActive(true);
   }
 
 
@@ -129,5 +137,36 @@ public class GameplayManager : MonoBehaviour
   {
     SetGameplayManagerState(GameplayManagerState.Phase3);
     UpdateGameplayState();
+  }
+
+
+  public void ChangeToPhase4()
+  {
+    SetGameplayManagerState(GameplayManagerState.Phase4);
+    UpdateGameplayState();
+  }
+
+
+  public void ChangeToGameOver()
+  {
+    SetGameplayManagerState(GameplayManagerState.GameOver);
+    UpdateGameplayState();
+  }
+
+
+  private void CancelAllInvokes()
+  {
+    CancelInvoke("ChangeToPhase2");
+    CancelInvoke("ChangeToPhase3");
+    CancelInvoke("ChangeToPhase4");
+  }
+
+  private void UnscheduleAllSpawners()
+  {
+    enemy01SpawnerGO.GetComponent<Enemy01Spawner>().UnscheduleEnemySpawner();
+    enemy03SpawnerGO.GetComponent<Enemy03Spawner>().UnscheduleNextEnemySpawn();
+    enemy04SpawnerGO.GetComponent<Enemy04Spawner>().UnscheduleNextSpawnEnemy();
+    enemy06SpawnerGO.GetComponent<Enemy06Spawner>().UnscheduleNextSpawn();
+    collectableSpawnerGO.GetComponent<CollectableSpawner>().UnscheduleLifeCollectableSpawn();
   }
 }

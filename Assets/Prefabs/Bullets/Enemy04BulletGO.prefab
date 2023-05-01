@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8316821120066919543}
   - component: {fileID: 8616185882927398796}
   - component: {fileID: -1419637496012198463}
+  - component: {fileID: -8330516745301457723}
   m_Layer: 0
   m_Name: Enemy04BulletGO
   m_TagString: EnemyBulletTag
@@ -147,3 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+--- !u!114 &-8330516745301457723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984897958415353211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f2e2da395202749917531893324bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactAnimGO: {fileID: 7555378666829240479, guid: 877aeed4548f6244da5be6a783b58d7c, type: 3}

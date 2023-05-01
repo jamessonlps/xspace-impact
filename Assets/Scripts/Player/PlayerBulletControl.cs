@@ -7,9 +7,6 @@ public class PlayerBulletControl : MonoBehaviour
   [Header("Attributes")]
   public float speed;
 
-  [Header("Prefabs")]
-  public GameObject impactAnimGO;
-
   void Update()
   {
     Vector2 position = transform.position;
@@ -22,26 +19,5 @@ public class PlayerBulletControl : MonoBehaviour
     if ((transform.position.x < bottomLeft.x) || (transform.position.x > topRight.x) ||
         (transform.position.y < bottomLeft.y) || (transform.position.y > topRight.y))
       Destroy(gameObject);
-  }
-
-  private void OnTriggerEnter2D(Collider2D collider)
-  {
-    if (collider.TryGetComponent<Enemy>(out var enemy))
-    {
-      PlayImpactAnimation();
-      Destroy(gameObject);
-      enemy.lifeManager.TakeDamage(1);
-    }
-    if (collider.tag == "EnemyBulletTag")
-    {
-      PlayImpactAnimation();
-      Destroy(gameObject);
-    }
-  }
-
-  void PlayImpactAnimation()
-  {
-    GameObject impactAnim = (GameObject)Instantiate(impactAnimGO);
-    impactAnim.transform.position = transform.position;
   }
 }

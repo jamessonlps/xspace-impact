@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class StarGenerator : MonoBehaviour
 {
-  public GameObject starBlueGO;
+  [SerializeField] private GameObject starBlueGO;
+  [SerializeField] private GameObject starYellowGO;
+
   public int maxStars;
 
   void Start()
@@ -21,5 +23,12 @@ public class StarGenerator : MonoBehaviour
 
       star.transform.parent = transform;
     }
+
+    GameObject starYellow = (GameObject)Instantiate(starYellowGO);
+
+    starYellow.transform.position = new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
+    starYellow.GetComponent<StarBlue>().speed = 0.1f;
+
+    starYellow.transform.parent = transform;
   }
 }

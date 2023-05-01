@@ -23,11 +23,9 @@ public class Enemy04Spawner : MonoBehaviour
     enemyLifeData.fullLife = 30;
     enemyLifeData.timeBetweenDamage = 0.5f;
     enemyLifeData.invulnerableOnDamage = false;
-
-    Invoke("SpawnEnemy", 1f);
   }
 
-  void SpawnEnemy()
+  public void SpawnEnemy()
   {
     // Limite da tela
     Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
@@ -44,6 +42,16 @@ public class Enemy04Spawner : MonoBehaviour
       enemy.transform.position = position;
     }
 
+    ScheduleNextSpawnEnemy();
+  }
+
+  private void ScheduleNextSpawnEnemy()
+  {
     Invoke("SpawnEnemy", respawnTime);
+  }
+
+  public void UnscheduleNextSpawnEnemy()
+  {
+    CancelInvoke("SpawnEnemy");
   }
 }

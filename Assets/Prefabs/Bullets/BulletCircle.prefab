@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 44064494835847427}
   - component: {fileID: 4994015657414620845}
   - component: {fileID: 5567835382995661061}
+  - component: {fileID: 2559145383937329604}
   m_Layer: 0
   m_Name: BulletCircle
   m_TagString: EnemyBulletTag
@@ -134,6 +135,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6881e0fc5e2281419eef9367db358e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2559145383937329604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408041348288189096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f2e2da395202749917531893324bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   impactAnimGO: {fileID: 7555378666829240479, guid: 877aeed4548f6244da5be6a783b58d7c, type: 3}

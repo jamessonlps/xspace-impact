@@ -5,16 +5,33 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-  TMP_Text timerText;
+  [SerializeField] private TMP_Text totalTimeText;
+  [SerializeField] private TMP_Text currentTimeText;
+
+  public bool isTimerRunning = false;
+
   float gameplayTime;
 
-  void Start()
+  public void StartTimer()
   {
-    timerText = GetComponent<TMP_Text>();
-    gameplayTime = 0;
+    gameplayTime = 0f;
+    isTimerRunning = true;
   }
 
-  void Update()
+  public void StopTimer()
+  {
+    isTimerRunning = false;
+  }
+
+  private void Update()
+  {
+    if (isTimerRunning)
+      UpdateTimerUI();
+    else
+      UpdateTotalTimeUI();
+  }
+
+  private void UpdateTimerUI()
   {
     gameplayTime += Time.deltaTime;
 
@@ -22,6 +39,15 @@ public class Timer : MonoBehaviour
     int minutes = ((int)gameplayTime / 60) % 60;
     int secs = (int)gameplayTime % 60;
 
-    timerText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + secs.ToString("00");
+    currentTimeText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + secs.ToString("00");
+  }
+
+  private void UpdateTotalTimeUI()
+  {
+    int hours = (int)gameplayTime / 3600;
+    int minutes = ((int)gameplayTime / 60) % 60;
+    int secs = (int)gameplayTime % 60;
+
+    totalTimeText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + secs.ToString("00");
   }
 }
