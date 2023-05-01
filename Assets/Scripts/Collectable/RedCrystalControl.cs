@@ -4,35 +4,33 @@ using UnityEngine;
 
 public class RedCrystalControl : MonoBehaviour
 {
-    [Header("Attributes")]
-    public float speed;
+  [SerializeField] private CollectableItem collectableItem;
+  [SerializeField] private float speed = 5f;
 
-    public void InitAttributes(float _speed)
-    {
-        speed = _speed;
-    }
+  private Player player;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector2 position = transform.position;
+  private void Awake()
+  {
+    player = GameObject.FindObjectOfType<Player>();
+    collectableItem.OnItemCollected += HandleGetCollectableItem;
+  }
 
-        // Atualiza a posição do crystal
-        position = new Vector2(position.x - speed * Time.deltaTime, position.y);
-        transform.position = position;
+  private void OnDestroy() => collectableItem.OnItemCollected -= HandleGetCollectableItem;
 
-        // Remove o crystal quando ele sai da tela
-        Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
-        if (position.x < bottomLeft.x)
-        Destroy(gameObject);
-    }
-    
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        // Detecta colisão com o a nave
-        if (collider.tag == "PlayerTag")
-        {
-            Destroy(gameObject);
-        }
-        }
+  private void HandleGetCollectableItem()
+  {
+    if (player != null)
+      player.IncreaseLife();
+  }
+
+  void Update()
+  {
+    Vector2 position = transform.position;
+    position = new Vector2(position.x - speed * Time.deltaTime, position.y);
+    transform.position = position;
+
+    Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+    if (position.x < bottomLeft.x)
+      Destroy(gameObject);
+  }
 }

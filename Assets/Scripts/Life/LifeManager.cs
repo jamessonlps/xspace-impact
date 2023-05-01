@@ -50,6 +50,13 @@ public class LifeManager : MonoBehaviour
     return true;
   }
 
+  public bool IncreaseLife()
+  {
+    if (this.life <= 0) return false;
+    this.Life++;
+    return true;
+  }
+
   public bool CanTakeDamage()
   {
     if (!lifeData.invulnerableOnDamage) return true;

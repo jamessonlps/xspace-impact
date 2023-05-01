@@ -7,11 +7,16 @@ using TMPro;
 public class GameplayManager : MonoBehaviour
 {
   [SerializeField] private GameObject playerGO;
+
+  [Header("Enemy Spawners")]
   [SerializeField] private GameObject enemy01SpawnerGO;
   [SerializeField] private GameObject enemy03SpawnerGO;
   [SerializeField] private GameObject enemy04SpawnerGO;
   [SerializeField] private GameObject enemy06SpawnerGO;
   // [SerializeField] private GameObject gameOverGO;
+
+  [Header("Collectable Spawner")]
+  [SerializeField] private GameObject collectableSpawnerGO;
 
   public enum GameplayManagerState
   {
@@ -72,10 +77,14 @@ public class GameplayManager : MonoBehaviour
 
 
   /// <summary>
-  /// Fase 2: Entram os inimigos 3 (que atira)
+  /// Fase 2: Entram os inimigos 3 (que atira) e os coletáveis
   /// </summary>
   private void Phase2()
   {
+    // Aciona o spawner de coletáveis
+    collectableSpawnerGO.SetActive(true);
+    collectableSpawnerGO.GetComponent<CollectableSpawner>().ScheduleNextLifeCollectableSpawn();
+    // Aciona o spawner de inimigos 3
     enemy03SpawnerGO.SetActive(true);
     enemy03SpawnerGO.GetComponent<Enemy03Spawner>().ScheduleNextSpawn();
     Invoke("ChangeToPhase3", 60f);

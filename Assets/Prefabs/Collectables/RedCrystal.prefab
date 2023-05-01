@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 456333732579022159}
   - component: {fileID: 456333732579022158}
   - component: {fileID: 456333732579022157}
-  - component: {fileID: 1503648799139576346}
   - component: {fileID: 456333732579022152}
+  - component: {fileID: 1503648799139576346}
+  - component: {fileID: -6282057044529481221}
   m_Layer: 0
   m_Name: RedCrystal
   m_TagString: Untagged
@@ -108,19 +109,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1503648799139576346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456333732579022156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bb0bfd1348484145a9e28a43e07a7b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
 --- !u!50 &456333732579022152
 Rigidbody2D:
   serializedVersion: 4
@@ -142,6 +130,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1503648799139576346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456333732579022156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb0bfd1348484145a9e28a43e07a7b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectableItem: {fileID: -6282057044529481221}
+  speed: 5
+--- !u!114 &-6282057044529481221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456333732579022156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ef5fc0ebf16534db5871c142c64bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &456333733334286327
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,4 +57,9 @@ public class Player : MonoBehaviour
     // TODO: implementar o take damage nos bullets dos inimigos
     return lifeManager.TakeDamage(damage);
   }
+
+  public bool IncreaseLife()
+  {
+    return lifeManager.IncreaseLife();
+  }
 }
