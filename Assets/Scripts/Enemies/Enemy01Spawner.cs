@@ -27,13 +27,6 @@ public class Enemy01Spawner : MonoBehaviour
     enemyLifeData1.fullLife = 1;
     enemyLifeData1.timeBetweenDamage = 0.5f;
     enemyLifeData1.invulnerableOnDamage = false;
-
-    SpawnEnemy(); // TODO: remover do start
-  }
-
-  void Update()
-  {
-
   }
 
   void SpawnEnemy()
@@ -41,6 +34,7 @@ public class Enemy01Spawner : MonoBehaviour
     // Escolhe um inimigo aleatório
     int randomIndex = Random.Range(0, enemiesGO.Length);
     GameObject enemy = (GameObject)Instantiate(enemiesGO[randomIndex]);
+    enemy.transform.parent = transform;
 
     if (randomIndex == 0)
     {
@@ -60,11 +54,10 @@ public class Enemy01Spawner : MonoBehaviour
     Vector2 position = new Vector2(topRight.x + offset.x, Random.Range(bottomLeft.y + offset.y, topRight.y - offset.y));
     enemy.transform.position = position;
 
-    // Chama a função novamente
     ScheduleNextEnemySpawn();
   }
 
-  void ScheduleNextEnemySpawn()
+  public void ScheduleNextEnemySpawn()
   {
     if (spawnRate > minSpawnRate)
       Invoke("UpdateEnemySpawnRate", 1f);
@@ -74,5 +67,11 @@ public class Enemy01Spawner : MonoBehaviour
   void UpdateEnemySpawnRate()
   {
     spawnRate -= spawnRateDelta;
+  }
+
+  public void UnscheduleEnemySpawner()
+  {
+    CancelInvoke("SpawnEnemy");
+    CancelInvoke("UpdateEnemySpawnRate");
   }
 }

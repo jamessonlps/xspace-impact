@@ -25,12 +25,6 @@ public class Enemy03Spawner : MonoBehaviour
     enemyLifeData.fullLife = 10;
     enemyLifeData.timeBetweenDamage = 0.5f;
     enemyLifeData.invulnerableOnDamage = false;
-    Invoke("SpawnEnemy", 1f);
-  }
-
-  void Update()
-  {
-
   }
 
   void SpawnEnemy()
@@ -59,8 +53,13 @@ public class Enemy03Spawner : MonoBehaviour
     ScheduleNextSpawn();
   }
 
-  void ScheduleNextSpawn()
+  public void ScheduleNextSpawn()
   {
     Invoke("SpawnEnemy", SpawnerRate);
+  }
+
+  public void UnscheduleNextEnemySpawn()
+  {
+    CancelInvoke("SpawnEnemy");
   }
 }
