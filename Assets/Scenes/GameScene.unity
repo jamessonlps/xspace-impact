@@ -1352,6 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6140682a887c5444e919fcb854d8d7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameoverSong: {fileID: 8300000, guid: 7b892fd10d0ca254e82f97ea6a8a1221, type: 3}
   songs:
   - {fileID: 8300000, guid: 601f2d5cb941c994c80e4f0cc1d2cc54, type: 3}
   - {fileID: 8300000, guid: 52663487375f8c94faf0f23bda5907d6, type: 3}
@@ -1583,7 +1584,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -589728269
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d7caf5c3a5095f347b84a22c1eebea1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2236,6 +2237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGO: {fileID: 1023823190}
   timer: {fileID: 1309368594}
+  musicPlayerGO: {fileID: 949405339}
   enemy01SpawnerGO: {fileID: 1798675248}
   enemy03SpawnerGO: {fileID: 82312788}
   enemy04SpawnerGO: {fileID: 381979026}

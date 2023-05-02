@@ -50,6 +50,9 @@ TagManager:
   - name: Background
     uniqueID: 117939849
     locked: 0
+  - name: Enemies
+    uniqueID: 2732789687
+    locked: 0
   - name: GamePlay
     uniqueID: 3705239027
     locked: 0

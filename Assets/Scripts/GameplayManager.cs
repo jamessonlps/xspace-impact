@@ -8,6 +8,7 @@ public class GameplayManager : MonoBehaviour
 {
   [SerializeField] private GameObject playerGO;
   [SerializeField] private Timer timer;
+  [SerializeField] private GameObject musicPlayerGO;
 
   [Header("Enemy Spawners")]
   [SerializeField] private GameObject enemy01SpawnerGO;
@@ -131,6 +132,7 @@ public class GameplayManager : MonoBehaviour
 
   private void GameOver()
   {
+    musicPlayerGO.GetComponent<MusicPlayer>().PlayGameOver();
     timer.StopTimer();
     CancelAllInvokes();
     UnscheduleAllSpawners();

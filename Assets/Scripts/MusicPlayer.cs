@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+  [SerializeField] private AudioClip gameoverSong; // música de game over definida no Unity Editor
   public List<AudioClip> songs; // lista de músicas definidas no Unity Editor
 
   private List<AudioClip> currentSongs; // lista de músicas atualmente em reprodução
@@ -36,5 +37,12 @@ public class MusicPlayer : MonoBehaviour
     }
     audioSource.clip = currentSong; // define a música atual no AudioSource
     audioSource.Play(); // reproduz a música
+  }
+
+  public void PlayGameOver()
+  {
+    audioSource.Stop();
+    audioSource.clip = gameoverSong;
+    audioSource.Play();
   }
 }
