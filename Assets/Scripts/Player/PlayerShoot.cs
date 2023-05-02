@@ -8,6 +8,8 @@ public class PlayerShoot : MonoBehaviour
   [SerializeField] private AudioSource audioSource;
   [SerializeField] private AudioClip shootSound;
 
+  private int shootLevel = 1;
+
   [Header("Control Variables")]
   public float bulletSpeed;
 
@@ -18,6 +20,8 @@ public class PlayerShoot : MonoBehaviour
   [Header("Gun Fire Control")]
   public GameObject playerBulletPosition01;
   public GameObject playerBulletPosition02;
+  public GameObject playerBulletPosition03;
+  public GameObject playerBulletPosition04;
   public GameObject playerGunFirePosition01;
   public GameObject playerGunFirePosition02;
 
@@ -59,6 +63,18 @@ public class PlayerShoot : MonoBehaviour
     bullet01.transform.position = playerBulletPosition01.transform.position;
     bullet02.transform.position = playerBulletPosition02.transform.position;
 
+    if (shootLevel >= 2)
+    {
+      GameObject bullet03 = (GameObject)Instantiate(playerBullet);
+      GameObject bullet04 = (GameObject)Instantiate(playerBullet);
+
+      bullet03.GetComponent<PlayerBulletControl>().speed = bulletSpeed;
+      bullet04.GetComponent<PlayerBulletControl>().speed = bulletSpeed;
+
+      bullet03.transform.position = playerBulletPosition03.transform.position;
+      bullet04.transform.position = playerBulletPosition04.transform.position;
+    }
+
     Invoke("StopShootingAnimation", 0.1f);
   }
 
@@ -91,5 +107,18 @@ public class PlayerShoot : MonoBehaviour
   void StopShootingAnimation()
   {
     playerAnimator.SetBool("isShooting", false);
+  }
+
+
+  public void UpgradeShootLevel()
+  {
+    if (shootLevel <= 3)
+      shootLevel++;
+  }
+
+  public void DowngradeShootLevel()
+  {
+    if (shootLevel > 1)
+      shootLevel--;
   }
 }

@@ -6,12 +6,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+  [Header("Audio")]
   [SerializeField] private AudioSource audioSource;
   [SerializeField] private GameObject audioExplosionGO;
 
+  [Header("Life")]
   [SerializeField] private LifeManager lifeManager;
   [SerializeField] private TMP_Text lifeText;
+
+  [Header("Gameplay Manager")]
   [SerializeField] private GameplayManager gameplayManager;
+
+  [Header("Explosion Animation")]
   [SerializeField] private GameObject exposionAnimation;
 
   private BlinkDamageAnimation blinkDamageAnimation;
@@ -36,6 +42,7 @@ public class Player : MonoBehaviour
 
   private void HandleTakeDamage()
   {
+    gameObject.GetComponent<PlayerShoot>().DowngradeShootLevel();
     audioSource.Play();
     blinkDamageAnimation.StartAnimation();
   }

@@ -11,6 +11,7 @@ public class CollectableSpawner : MonoBehaviour
 
   [Header("Prefabs")]
   [SerializeField] private GameObject lifeCollectable;
+  [SerializeField] private GameObject bulletCollectable;
 
   public void SpawnLifeCollectable()
   {
@@ -41,5 +42,34 @@ public class CollectableSpawner : MonoBehaviour
   public void UpdateLifeCollectableSpawnRate()
   {
     spawnRate -= spawnRateDelta;
+  }
+
+
+
+
+  public void SpawnBulletCollectable()
+  {
+    Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+    Vector2 topRight = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+
+    GameObject bullet = Instantiate(bulletCollectable);
+    Vector2 offset = bullet.GetComponent<Renderer>().bounds.size;
+    Vector2 position = new Vector2(topRight.x + offset.x, Random.Range(bottomLeft.y + offset.y, topRight.y - offset.y));
+    bullet.transform.position = position;
+
+    ScheduleNextBulletCollectableSpawn();
+  }
+
+  private void ScheduleNextBulletCollectableSpawn()
+  {
+    if (spawnRate > minSpawnRate)
+      Invoke("UpdateBulletCollectableSpawnRate", 45f);
+    Invoke("SpawnLifeCollectable", spawnRate);
+  }
+
+  public void UnscheduleBulletCollectableSpawn()
+  {
+    CancelInvoke("SpawnBulletCollectable");
+    CancelInvoke("UpdateBulletCollectableSpawnRate");
   }
 }

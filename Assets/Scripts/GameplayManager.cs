@@ -88,6 +88,7 @@ public class GameplayManager : MonoBehaviour
 
   private void Phase1()
   {
+    collectableSpawnerGO.GetComponent<CollectableSpawner>().SpawnBulletCollectable();
     enemy01SpawnerGO.GetComponent<Enemy01Spawner>().ScheduleNextEnemySpawn();
     Invoke("ChangeToPhase2", 30f);
   }
@@ -95,6 +96,7 @@ public class GameplayManager : MonoBehaviour
 
   private void Phase2()
   {
+
     collectableSpawnerGO.GetComponent<CollectableSpawner>().SpawnLifeCollectable();
     enemy03SpawnerGO.GetComponent<Enemy03Spawner>().SpawnEnemy();
     Invoke("ChangeToPhase3", 60f);
