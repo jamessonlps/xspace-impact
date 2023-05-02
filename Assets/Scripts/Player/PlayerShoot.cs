@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerShoot : MonoBehaviour
 {
+  [SerializeField] private AudioSource audioSource;
+  [SerializeField] private AudioClip shootSound;
+
   [Header("Control Variables")]
   public float bulletSpeed;
 
@@ -44,6 +47,7 @@ public class PlayerShoot : MonoBehaviour
   private void ShotOnThem()
   {
     PlayAnimGunFire();
+    PlayShootSong();
     playerAnimator.SetBool("isShooting", true);
 
     GameObject bullet01 = (GameObject)Instantiate(playerBullet);
@@ -72,6 +76,12 @@ public class PlayerShoot : MonoBehaviour
 
     gunFireAnim01.transform.position = playerGunFirePosition01.transform.position;
     gunFireAnim02.transform.position = playerGunFirePosition02.transform.position;
+  }
+
+  private void PlayShootSong()
+  {
+    audioSource.clip = shootSound;
+    audioSource.Play();
   }
 
   /// <summary>

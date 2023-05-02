@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097b0872da2cd684696b450096bf555c, type: 3}
   m_Name: Object_LifePlayer
   m_EditorClassIdentifier: 
-  fullLife: 4
+  fullLife: 2
   timeBetweenDamage: 2
   invulnerableOnDamage: 1

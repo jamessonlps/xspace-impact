@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy04Control : MonoBehaviour
 {
+  [SerializeField] private AudioSource audioSourceShoot;
+
   [Header("Attributes")]
   public float speed;         // velocidade do inimigo
   public float speedShooting; // velocidade do inimigo quando está atirando
@@ -92,6 +94,8 @@ public class Enemy04Control : MonoBehaviour
 
   void OnStartShootingAnimation()
   {
+    audioSourceShoot.Play();
+
     // Instancia o tiro
     GameObject bullet01 = (GameObject)Instantiate(bullet);
     bullet01.transform.position = bulletSpawnPoint01.transform.position;

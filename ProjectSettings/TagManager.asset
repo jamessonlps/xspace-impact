@@ -9,6 +9,7 @@ TagManager:
   - PlayerBulletTag
   - EnemyBulletTag
   - PlayerCollider
+  - ExplosionAudio
   layers:
   - Default
   - TransparentFX

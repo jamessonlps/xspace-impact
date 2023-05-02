@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+  [SerializeField] private AudioSource audioSource;
+  [SerializeField] private GameObject audioExplosionGO;
+
   [SerializeField] private LifeManager lifeManager;
   [SerializeField] private TMP_Text lifeText;
   [SerializeField] private GameplayManager gameplayManager;
@@ -33,6 +36,7 @@ public class Player : MonoBehaviour
 
   private void HandleTakeDamage()
   {
+    audioSource.Play();
     blinkDamageAnimation.StartAnimation();
   }
 
@@ -43,8 +47,9 @@ public class Player : MonoBehaviour
 
   private void HandleDeath()
   {
-    Instantiate(exposionAnimation, transform.position, Quaternion.identity);
-    // TODO: implementar som da explosão
+    GameObject explosion = (GameObject)Instantiate(exposionAnimation, transform.position, Quaternion.identity);
+    explosion.transform.localScale = new Vector3(2f, 2f, 2f);
+    audioExplosionGO.GetComponent<AudioSource>().Play();
     gameplayManager.ChangeToGameOver();
     Destroy(gameObject);
   }

@@ -29,6 +29,8 @@ public class GameplayManager : MonoBehaviour
     Phase2,
     Phase3,
     Phase4,
+    Phase5,
+    Phase6,
     GameOver
   }
 
@@ -60,8 +62,17 @@ public class GameplayManager : MonoBehaviour
       case GameplayManagerState.Phase4:
         Phase4();
         break;
+      case GameplayManagerState.Phase5:
+        Phase5();
+        break;
+      case GameplayManagerState.Phase6:
+        Phase6();
+        break;
       case GameplayManagerState.GameOver:
         GameOver();
+        break;
+      default:
+        Starting();
         break;
     }
   }
@@ -101,7 +112,20 @@ public class GameplayManager : MonoBehaviour
   {
     enemy06SpawnerGO.GetComponent<Enemy03Spawner>().UnscheduleNextEnemySpawn();
     enemy04SpawnerGO.GetComponent<Enemy04Spawner>().SpawnEnemy();
-    Invoke("ChangeToGameOver", 60f);
+    Invoke("ChangeToPhase5", 60f);
+  }
+
+
+  private void Phase5()
+  {
+    enemy06SpawnerGO.GetComponent<Enemy03Spawner>().SpawnEnemy();
+    Invoke("ChangeToPhase6", 60f);
+  }
+
+
+  private void Phase6()
+  {
+    enemy03SpawnerGO.GetComponent<Enemy03Spawner>().SpawnEnemy();
   }
 
 
@@ -117,6 +141,12 @@ public class GameplayManager : MonoBehaviour
   private void ShowGameOver()
   {
     gameOverGO.SetActive(true);
+    Invoke("BackToMenu", 3f);
+  }
+
+  public void BackToMenu()
+  {
+    UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
   }
 
 
@@ -147,6 +177,20 @@ public class GameplayManager : MonoBehaviour
   }
 
 
+  public void ChangeToPhase5()
+  {
+    SetGameplayManagerState(GameplayManagerState.Phase5);
+    UpdateGameplayState();
+  }
+
+
+  public void ChangeToPhase6()
+  {
+    SetGameplayManagerState(GameplayManagerState.Phase6);
+    UpdateGameplayState();
+  }
+
+
   public void ChangeToGameOver()
   {
     SetGameplayManagerState(GameplayManagerState.GameOver);
@@ -159,6 +203,8 @@ public class GameplayManager : MonoBehaviour
     CancelInvoke("ChangeToPhase2");
     CancelInvoke("ChangeToPhase3");
     CancelInvoke("ChangeToPhase4");
+    CancelInvoke("ChangeToPhase5");
+    CancelInvoke("ChangeToPhase6");
   }
 
   private void UnscheduleAllSpawners()

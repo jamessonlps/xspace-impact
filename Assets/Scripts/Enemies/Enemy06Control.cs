@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy06Control : MonoBehaviour
 {
+  [SerializeField] private AudioSource audioSourceShoot;
+
   [Header("Attributes")]
   public float speed;        // velocidade do inimigo
   public float shootingRate; // quantos segundos entre cada tiro
@@ -54,6 +56,7 @@ public class Enemy06Control : MonoBehaviour
     if (isShootRotationCompleted)
       return;
 
+    audioSourceShoot.Play();
     // Dispara os tiros usando os eixos dos bulletPositions
     GameObject bullet01 = (GameObject)Instantiate(enemyBullet);
     bullet01.transform.position = enemyBulletPosition01.transform.position;

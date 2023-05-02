@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemy03Control : MonoBehaviour
 {
+  [SerializeField] private AudioSource audioSourceShoot;
+
   [Header("Attributes")]
   public float speed;
   public float shootingRate; // quantos segundos entre cada tiro
@@ -85,6 +87,8 @@ public class Enemy03Control : MonoBehaviour
 
   private void ShootThemUp()
   {
+    audioSourceShoot.Play();
+
     // instancia os tiros
     GameObject bullet01 = (GameObject)Instantiate(bullet);
     bullet01.transform.position = bulletSpawnPoint01.transform.position;
